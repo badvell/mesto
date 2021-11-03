@@ -7,4 +7,4 @@
 
 **Проект**
 
-* [Ссылка на проект](https://badvell.github.io/russian-travel/)
+* [Ссылка на проект](https://badvell.github.io/mesto/)
