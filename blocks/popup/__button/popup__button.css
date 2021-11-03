@@ -1,0 +1,21 @@
+.popup__button {
+  width: 100%;
+  border-radius: 2px;
+  border: none;
+  max-width: 358px;
+  height: 50px;
+  color: #fff;
+  background-color: #000;
+}
+
+@media screen and (max-width: 580px) {
+  .popup__button {
+    max-width: 238px;
+  }
+}
+
+.popup__button:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+  cursor: pointer;
+}

@@ -1,0 +1,13 @@
+.photo__elements-text {
+  font-weight: 900;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 90%;
+}

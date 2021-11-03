@@ -1,0 +1,23 @@
+.photo__elements-heart {
+  background-image: url(../../../img/Heart.svg);
+  border: none;
+  background-color: transparent;
+  width: 22px;
+  height: 19px;
+}
+
+.photo__elements-heart:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.photo__elements-heart:active {
+  background-image: url(../../../img/like.png);
+  width: 22px;
+  opacity: 1;
+  height: 19px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

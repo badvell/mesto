@@ -1,0 +1,16 @@
+.profile__author_description {
+  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@media screen and (max-width: 580px) {
+  .profile__author_description {
+    margin-bottom: 36px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
