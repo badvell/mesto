@@ -1,4 +1,4 @@
-.profile__author_title {
+.profile__author-title {
   margin: 0;
   margin-bottom: 16px;
   font-style: normal;
@@ -9,13 +9,13 @@
 }
 
 @media screen and (max-width: 580px) {
-  .profile__author_title {
+  .profile__author-title {
     margin-bottom: 14px;
   }
 }
 
 @media screen and (max-width: 879px) {
-  .profile__author_title {
+  .profile__author-title {
     font-size: 27px;
     line-height: 33px;
   }
