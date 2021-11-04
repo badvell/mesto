@@ -11,11 +11,6 @@
   margin: 0;
 }
 
-.popup.active {
-  display: block;
-  transition: top 0ms ease-in-out 0ms;
-}
-
 @media screen and (max-width: 580px) {
   .popup {
     left: 0;

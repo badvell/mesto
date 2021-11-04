@@ -1,9 +1,9 @@
 document.querySelector(".profile__button-edit").addEventListener("click", function () {
-  document.querySelector(".popup").classList.add("active");
+  document.querySelector(".popup").classList.add("popup__active");
 });
 
 document.querySelector(".popup__icon-close").addEventListener("click", function () {
-  document.querySelector(".popup").classList.remove("active");
+  document.querySelector(".popup").classList.remove("popup__active");
 });
 
 function openPopup() {
@@ -25,7 +25,7 @@ function formSubmitHandler(evt) {
 }
 
 document.querySelector(".popup__button").addEventListener("click", function () {
-  document.querySelector(".popup").classList.remove("active");
+  document.querySelector(".popup").classList.remove("popup__active");
 });
 
 formElement.addEventListener('submit', formSubmitHandler);

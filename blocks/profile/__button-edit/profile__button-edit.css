@@ -7,7 +7,7 @@
   background-position: center;
   width: 24px;
   height: 24px;
-  margin-left: 18px;
+  margin: 0 0 0 18px;
 }
 
 .profile__button-edit:hover {
