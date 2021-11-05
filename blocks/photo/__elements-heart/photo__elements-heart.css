@@ -15,10 +15,6 @@
 
 .photo__elements-heart:active {
   background-image: url(../../../img/like.png);
-  width: 22px;
   opacity: 1;
-  height: 19px;
-  border: none;
-  background-color: transparent;
   cursor: pointer;
 }

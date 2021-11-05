@@ -9,13 +9,12 @@
   background-color: white;
   border-radius: 10px;
   width: 430px;
-  min-height: 330px;
 }
 
 @media screen and (max-width: 580px) {
   .popup__container {
     left: calc(50% - 141px);
-    top: calc(50% - 121px);
+    top: calc(50% - 160px);
     max-width: 282px;
     padding: 25px 22px;
   }
