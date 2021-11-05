@@ -1,4 +1,4 @@
-.photo__elements-heart {
+.photos__heart {
   background-image: url(../../../img/Heart.svg);
   border: none;
   background-color: transparent;
@@ -7,13 +7,13 @@
   height: 19px;
 }
 
-.photo__elements-heart:hover {
+.photos__heart:hover {
   opacity: 0.5;
   transition: 0.5s;
   cursor: pointer;
 }
 
-.photo__elements-heart:active {
+.photos__heart:active {
   background-image: url(../../../img/like.png);
   opacity: 1;
   cursor: pointer;
