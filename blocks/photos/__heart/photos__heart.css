@@ -14,7 +14,7 @@
 }
 
 .photos__heart:active {
-  background-image: url(../../../img/like.png);
+  background-image: url(../../../img/Heart-black.svg);
   opacity: 1;
   cursor: pointer;
 }
