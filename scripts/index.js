@@ -2,9 +2,9 @@ let formElement = document.querySelector(".popup__form");
 let profileBtn = document.querySelector(".profile__button-edit");
 let closeBtn = document.querySelector(".popup__icon-close");
 
-let titleInput = document.querySelector(".popup__input_title");
+let titleInput = document.querySelector(".popup__input_user_title");
 let titleProfile = document.querySelector(".profile__author-title");
-let aboutInput = document.querySelector(".popup__input_description");
+let aboutInput = document.querySelector(".popup__input_user_description");
 let aboutProfile = document.querySelector(".profile__author-description");
 let popup = document.querySelector(".popup");
 
@@ -34,6 +34,5 @@ function formSubmitHandler(evt) {
   closePopup();
 }
 
-profileBtn.addEventListener('click', openPopup);
 formElement.addEventListener('submit', formSubmitHandler);
 

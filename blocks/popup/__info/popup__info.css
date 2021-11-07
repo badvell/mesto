@@ -1,5 +1,5 @@
 .popup__info {
-  margin: 0 0 54px;
+  margin: 34px 0 50px;
   max-width: 330px;
   font-weight: 900;
   font-family: "Inter", "Arial", sans-serif;
@@ -11,6 +11,7 @@
 @media screen and (max-width: 580px) {
   .popup__info {
     margin-bottom: 75px;
+    margin-top: 0;
     font-size: 18px;
     line-height: 22px;
   }
