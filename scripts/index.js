@@ -9,10 +9,6 @@ let aboutProfile = document.querySelector(".profile__author-description");
 let popup = document.querySelector(".popup");
 
 
-profileBtn.addEventListener("click", openPopup);
-
-closeBtn.addEventListener("click", closePopup);
-
 function openPopup() {
   titleInput.value = titleProfile.textContent;
   aboutInput.value = aboutProfile.textContent;
@@ -34,5 +30,7 @@ function formSubmitHandler(evt) {
   closePopup();
 }
 
+profileBtn.addEventListener("click", openPopup);
+closeBtn.addEventListener("click", closePopup);
 formElement.addEventListener('submit', formSubmitHandler);
 
