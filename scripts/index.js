@@ -2,7 +2,7 @@ let formEditElement = document.querySelector(".popup_edit_profile");
 let profileBtn = document.querySelector(".profile__button-edit");
 let popupCloseAddPlace = document.querySelector('.popup__close_add_place');
 let popupCloseEditProfile = document.querySelector('.popup__close_edit_profile');
-let popupCloseSize = document.querySelector(".size__btn_close_img");
+let popupCloseSize = document.querySelector(".size__close");
 
 let titleInput = document.querySelector(".popup__input_user_title");
 let titleProfile = document.querySelector(".profile__author-title");
