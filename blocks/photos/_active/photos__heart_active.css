@@ -1,15 +1,10 @@
-.photos__heart {
-  background-image: url(../../../img/Heart.svg);
+.photos__heart_active {
+  background-image: url(../../../img/Heart-black.svg);
+  opacity: 1;
   border: none;
   background-color: transparent;
   background-repeat: no-repeat;
   width: 22px;
   height: 19px;
-}
-
-.photos__heart:hover {
-  opacity: 0.5;
-  transition: 0.5s;
   cursor: pointer;
 }
-

@@ -1,4 +1,4 @@
-.popup {
+.form {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -6,9 +6,7 @@
   top: 0;
   left: 0;
   color: #000;
-  display: flex;
+  display: none;
+  transition: top 0ms ease-in-out 200ms;
   margin: 0;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0.3s, opacity 0.5s linear;
 }

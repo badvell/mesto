@@ -29,64 +29,7 @@
         </section>
 
         <section class="photos">
-          <div class="photos__card">
-            <img
-              src="./img/Карачаевск.jpg"
-              alt="Карачаевск"
-              class="photos__image"
-            />
-            <div class="photos__wrapper">
-              <h2 class="photos__text">Карачаевск</h2>
-              <button type="button" class="photos__heart"></button>
-            </div>
-          </div>
-          <div class="photos__card">
-            <img
-              src="./img/гора-Эльбрус.png"
-              alt="Эльбрус"
-              class="photos__image"
-            />
-            <div class="photos__wrapper">
-              <h2 class="photos__text">Гора Эльбрус</h2>
-              <button type="button" class="photos__heart"></button>
-            </div>
-          </div>
-          <div class="photos__card">
-            <img src="./img/Домбай.png" alt="Домбай" class="photos__image" />
-            <div class="photos__wrapper">
-              <h2 class="photos__text">Домбай</h2>
-              <button type="button" class="photos__heart"></button>
-            </div>
-          </div>
-          <div class="photos__card">
-            <img
-              src="./img/гора-Эльбрус.png"
-              alt="гора Эльбрус"
-              class="photos__image"
-            />
-            <div class="photos__wrapper">
-              <h2 class="photos__text">Гора Эльбрус</h2>
-              <button type="button" class="photos__heart"></button>
-            </div>
-          </div>
-          <div class="photos__card">
-            <img src="./img/Домбай.png" alt="Домбай" class="photos__image" />
-            <div class="photos__wrapper">
-              <h2 class="photos__text">Домбай</h2>
-              <button type="button" class="photos__heart"></button>
-            </div>
-          </div>
-          <div class="photos__card">
-            <img
-              src="./img/Карачаевск.jpg"
-              alt="Карачаевск"
-              class="photos__image"
-            />
-            <div class="photos__wrapper">
-              <h2 class="photos__text">Карачаево-Черкессия</h2>
-              <button type="button" class="photos__heart"></button>
-            </div>
-          </div>
+          <ul class="photos__list"></ul>
         </section>
       </main>
 
@@ -94,9 +37,12 @@
         <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
       </footer>
 
-      <div class="popup">
+      <div class="popup popup_edit_profile">
         <div class="popup__container">
-          <button class="popup__icon-close" type="button"></button>
+          <button
+            class="popup__close popup__close_edit_profile"
+            type="button"
+          ></button>
           <h2 class="popup__info">Редактировать профиль</h2>
           <form name="user-input" class="popup__form">
             <input
@@ -111,6 +57,59 @@
             />
             <button type="submit" class="popup__button">Сохранить</button>
           </form>
+        </div>
+      </div>
+
+      <div class="popup popup_add_place">
+        <div class="popup__container">
+          <button
+            class="popup__close popup__close_add_place"
+            type="button"
+          ></button>
+          <h2 class="popup__info">Новое место</h2>
+          <form name="add-place" class="popup__form">
+            <input
+              name="title"
+              class="popup__input popup__input_place_title"
+              type="text"
+              placeholder="Название"
+            />
+            <input
+              name="description"
+              class="popup__input popup__input_place_image"
+              type="text"
+              placeholder="Ссылка на картинку"
+            />
+            <button type="submit" class="popup__button">Создать</button>
+          </form>
+        </div>
+      </div>
+
+      <template class="template">
+        <div class="photos__card">
+          <button class="photos__trash" type="button"></button>
+          <img src="#" alt="#" class="photos__image" />
+          <div class="photos__wrapper">
+            <h2 class="photos__text"></h2>
+            <button
+              type="button"
+              onclick="Toggle(this)"
+              class="photos__heart"
+            ></button>
+          </div>
+        </div>
+      </template>
+
+      <div class="popup__size">
+        <div class="popup__wrapper">
+          <img class="popup__img" src="#" alt="#" />
+          <h2 class="popup__description"></h2>
+          <button
+            class="popup__close popup__close_size_photo"
+            type="button"
+            title="Закрыть"
+            aria-label="close"
+          ></button>
         </div>
       </div>
     </div>
