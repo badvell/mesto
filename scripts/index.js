@@ -58,7 +58,7 @@ function openSizePopup(cardLink, cardTitle) {
   popupSize.querySelector(".popup__img").src = cardLink;
   popupSize.querySelector(".popup__img").alt = cardTitle;
   popupSize.querySelector(".popup__description").textContent = cardTitle;
-  popupSize.classList.add('popup_active');
+  popupSize.classList.add('popup__size-resize');
 }
 
 function addPlace(card) {
@@ -96,7 +96,7 @@ function openPopup(evt) {
 function closePopup() {
   popup.classList.remove('popup_active');
   popupAddPlace.classList.remove('popup_active');
-  popupSize.classList.remove("popup_active");
+  popupSize.classList.remove("popup__size-resize");
 };
 
 function formSubmitHandler(evt) {
@@ -143,4 +143,3 @@ profileBtnAdd.addEventListener("click", openPopup);
 popupCloseAddPlace.addEventListener("click", closePopup);
 popupCloseEditProfile.addEventListener("click", closePopup);
 popupCloseSize.addEventListener("click", closePopup);
-

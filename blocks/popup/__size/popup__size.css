@@ -14,3 +14,9 @@
   color: #000;
   margin: 0;
 }
+
+.popup__size-resize {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.3s, opacity 0.5s linear;
+}
