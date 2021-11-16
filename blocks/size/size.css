@@ -1,4 +1,4 @@
-.popup__size {
+.size {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.3s, opacity 0.5s linear;
@@ -15,7 +15,7 @@
   margin: 0;
 }
 
-.popup__size-resize {
+.size-resize {
   visibility: visible;
   opacity: 1;
   transition: visibility 0.3s, opacity 0.5s linear;

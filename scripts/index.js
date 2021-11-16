@@ -2,7 +2,7 @@ let formEditElement = document.querySelector(".popup_edit_profile");
 let profileBtn = document.querySelector(".profile__button-edit");
 let popupCloseAddPlace = document.querySelector('.popup__close_add_place');
 let popupCloseEditProfile = document.querySelector('.popup__close_edit_profile');
-let popupCloseSize = document.querySelector(".popup__close_size_photo");
+let popupCloseSize = document.querySelector(".size__btn_close_img");
 
 let titleInput = document.querySelector(".popup__input_user_title");
 let titleProfile = document.querySelector(".profile__author-title");
@@ -15,10 +15,10 @@ let popupAddPlace = document.querySelector(".popup_add_place");
 let cardTemplate = document.querySelector(".template").content;
 let cardsContainer = document.querySelector(".photos__list");
 
-let popupSize = document.querySelector(".popup__size");
+let popupSize = document.querySelector(".size");
 let popupSizeContainer = document.querySelector(".popup__container");
-let popupSizeImg = popupSizeContainer.querySelector(".popup__img");
-let popupSizeDescription = popupSizeContainer.querySelector(".popup__description");
+let popupSizeImg = popupSizeContainer.querySelector(".size__img");
+let popupSizeDescription = popupSizeContainer.querySelector(".size__description");
 
 let formPhoto = popupAddPlace.querySelector('.popup__form');
 
@@ -55,17 +55,17 @@ function removeElement(photosCard) {
 }
 
 function openSizePopup(cardLink, cardTitle) {
-  popupSize.querySelector(".popup__img").src = cardLink;
-  popupSize.querySelector(".popup__img").alt = cardTitle;
-  popupSize.querySelector(".popup__description").textContent = cardTitle;
-  popupSize.classList.add('popup__size-resize');
+  popupSize.querySelector(".size__img").src = cardLink;
+  popupSize.querySelector(".size__img").alt = cardTitle;
+  popupSize.querySelector(".size__description").textContent = cardTitle;
+  popupSize.classList.add("size-resize");
 }
 
 function addPlace(card) {
   const photosCard = cardTemplate.querySelector(".photos__card").cloneNode(true);
-  photosCard.querySelector('.photos__image').src = card.link;
-  photosCard.querySelector('.photos__image').alt = card.name;
-  photosCard.querySelector('.photos__text').textContent = card.name;
+  photosCard.querySelector(".photos__image").src = card.link;
+  photosCard.querySelector(".photos__image").alt = card.name;
+  photosCard.querySelector(".photos__text").textContent = card.name;
 
   const sizeBtn = photosCard.querySelector(".photos__image");
   sizeBtn.addEventListener("click", () => openSizePopup(card.link, card.name));
@@ -96,7 +96,7 @@ function openPopup(evt) {
 function closePopup() {
   popup.classList.remove('popup_active');
   popupAddPlace.classList.remove('popup_active');
-  popupSize.classList.remove("popup__size-resize");
+  popupSize.classList.remove("size-resize");
 };
 
 function formSubmitHandler(evt) {
