@@ -73,12 +73,14 @@
               class="popup__input popup__input_place_title"
               type="text"
               placeholder="Название"
+              required
             />
             <input
               name="description"
               class="popup__input popup__input_place_image"
               type="text"
               placeholder="Ссылка на картинку"
+              required
             />
             <button type="submit" class="popup__button">Создать</button>
           </form>
@@ -91,21 +93,17 @@
           <img src="#" alt="#" class="photos__image" />
           <div class="photos__wrapper">
             <h2 class="photos__text"></h2>
-            <button
-              type="button"
-              onclick="Toggle(this)"
-              class="photos__heart"
-            ></button>
+            <button type="button" class="photos__heart"></button>
           </div>
         </div>
       </template>
 
-      <div class="size">
-        <div class="size__wrapper">
-          <img class="size__img" src="#" alt="#" />
-          <h2 class="size__description"></h2>
+      <div class="popup popup-size">
+        <div class="popup-size__wrapper">
+          <img class="popup-size__img" src="#" alt="#" />
+          <h2 class="popup-size__description"></h2>
           <button
-            class="size__close"
+            class="popup__close popup-size__close"
             type="button"
             title="Закрыть"
             aria-label="close"

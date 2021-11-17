@@ -1,7 +1,4 @@
-.size {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0.3s, opacity 0.5s linear;
+.popup-size {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,8 +12,3 @@
   margin: 0;
 }
 
-.size-resize {
-  visibility: visible;
-  opacity: 1;
-  transition: visibility 0.3s, opacity 0.5s linear;
-}
