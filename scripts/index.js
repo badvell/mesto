@@ -8,7 +8,6 @@ const titleInput = document.querySelector(".popup__input_user_title");
 const titleProfile = document.querySelector(".profile__author-title");
 const aboutInput = document.querySelector(".popup__input_user_description");
 const aboutProfile = document.querySelector(".profile__author-description");
-const popup = document.querySelector(".popup");
 
 const profileBtnAdd = document.querySelector(".profile__button-add");
 const popupAddPlace = document.querySelector(".popup_add_place");
@@ -70,12 +69,12 @@ function cardListener(cardLink, cardTitle) {
 
 function addPlace(card) {
   const photosCard = cardTemplate.querySelector(".photos__card").cloneNode(true);
+  const cardImage = photosCard.querySelector(".photos__image");
   photosCard.querySelector(".photos__image").src = card.link;
   photosCard.querySelector(".photos__image").alt = card.name;
   photosCard.querySelector(".photos__text").textContent = card.name;
 
-  const sizeBtn = photosCard.querySelector(".photos__image");
-  sizeBtn.addEventListener("click", () => cardListener(card.link, card.name));
+  cardImage.addEventListener("click", () => cardListener(card.link, card.name));
 
   const likeBtn = photosCard.querySelector(".photos__heart");
   likeBtn.addEventListener("click", () => like(likeBtn));
@@ -90,24 +89,17 @@ initialCards.forEach(elem => {
   cardsContainer.append(addPlace(elem));
 });
 
-function editInfo(evt) {
-  const openPopupElement = evt.target;
-  if (openPopupElement.classList.contains("profile__button-edit")) {
-    titleInput.value = titleProfile.textContent;
-    aboutInput.value = aboutProfile.textContent;
-    openPopup(formEditElement);
-  }
-  else if (openPopupElement.classList.contains("profile__button-add")) {
-    openPopup(popupAddPlace);
-  }
+function editInfo() {
+  titleInput.value = titleProfile.textContent;
+  aboutInput.value = aboutProfile.textContent;
+  openPopup(formEditElement);
 };
 
 
-function formSubmitHandler(evt) {
+function handleProfileSubmit(evt) {
   evt.preventDefault();
-
-  nameValue = titleInput.value;
-  jobValue = aboutInput.value;
+  const nameValue = titleInput.value;
+  const jobValue = aboutInput.value;
 
   titleProfile.textContent = nameValue;
   aboutProfile.textContent = jobValue;
@@ -115,12 +107,13 @@ function formSubmitHandler(evt) {
 }
 
 
-function submitHandlerCard(evt) {
+function handleCardSubmit(evt) {
   evt.preventDefault();
-  const linkValue = popupAddPlace.querySelectorAll("input");
+  const linkName = popupAddPlace.querySelector(".popup__input_place_title");
+  const linkImg = popupAddPlace.querySelector(".popup__input_place_image");
   const nameValue = addPlace({
-    name: linkValue[0].value,
-    link: linkValue[1].value
+    name: linkName.value,
+    link: linkImg.value
   });
   cardsContainer.prepend(nameValue);
   closePopup(popupAddPlace);
@@ -132,11 +125,15 @@ function like(likeBtn) {
 }
 
 
-profileBtn.addEventListener("click", editInfo);
-formEditElement.addEventListener("submit", formSubmitHandler);
-formPhoto.addEventListener("submit", submitHandlerCard);
+profileBtn.addEventListener("click", function () {
+  editInfo();
+})
+formEditElement.addEventListener("submit", handleProfileSubmit);
+formPhoto.addEventListener("submit", handleCardSubmit);
 
-profileBtnAdd.addEventListener("click", editInfo);
+profileBtnAdd.addEventListener("click", function () {
+  openPopup(popupAddPlace);
+})
 popupCloseAddPlace.addEventListener("click", function () {
   closePopup(popupAddPlace);
 })
